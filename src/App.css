@@ -251,6 +251,67 @@ section:hover {
   }
 }
 
+/* Footer moderno y siempre abajo */
+footer.footer {
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  color: #ff69b4;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(255, 105, 180, 0.3);
+  font-size: 0.9rem;
+  flex-shrink: 0; /* evita que se comprima */
+  box-shadow: 0 -3px 15px rgba(255, 105, 180, 0.2);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Contenedor de links/redes sociales */
+footer.footer .socials {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer.footer .socials a {
+  text-decoration: none;
+  color: #ff69b4;
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+footer.footer .socials a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Ajuste para mantener el footer siempre abajo */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupa toda la altura de la ventana */
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible entre header y footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+/* Animación suave de aparición (puedes reutilizar la que ya tienes) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .contacto {

@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import SobreMi from './pages/SobreMi';
 import Proyectos from './pages/Proyectos';
 import Contacto from './pages/Contacto';
+import Footer from './components/Footer';
 import './App.css';
 
 const App: React.FC = () => {
@@ -29,6 +30,9 @@ const App: React.FC = () => {
             <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </main>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </Router>
   );
