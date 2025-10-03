@@ -200,6 +200,80 @@ footer.footer .socials a:hover {
   transform: scale(1.2);
 }
 
+/* ==== Sección SobreMi ==== */
+.sobre-mi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  background: rgba(30,30,30,0.75);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.2);
+  transition: all 0.3s ease;
+}
+
+.sobre-mi:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(255,105,180,0.35);
+}
+
+.sobre-mi-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sobre-mi h2 {
+  font-size: 2.8rem;
+  color: #ff69b4;
+  margin-top: 1rem;
+  text-shadow: 0 0 15px rgba(255,105,180,0.5);
+}
+
+.sobre-mi h3 {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  color: #ff85c1;
+}
+
+.sobre-mi p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #eee;
+}
+
+/* ==== Habilidades ==== */
+.habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.habilidad {
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff69b4, #ff85c1);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.habilidad:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255,105,180,0.4);
+}
+
+
 /* ==== Animaciones ==== */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }

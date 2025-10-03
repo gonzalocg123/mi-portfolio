@@ -1,31 +1,35 @@
 import React from 'react';
 import miFoto from "../assets/mi-foto.png";
 
+const habilidades = [
+  "Java",
+  "JavaScript / TypeScript",
+  "React",
+  "Spring Boot",
+  "HTML / CSS",
+  "SQL / MySQL"
+];
+
 export default function SobreMi() {
   return (
     <section className="sobre-mi">
-      <img src={miFoto} alt="Foto de Gonzalo" className="foto" />
-      <h2>Hola, soy Gonzalo</h2>
+      <div className="sobre-mi-header">
+        <img src={miFoto} alt="Foto de Gonzalo" className="foto" />
+        <h2>Hola, soy Gonzalo</h2>
+      </div>
       <p>
-        Tengo 18 años, estoy terminando el FP Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).
-        Me apasiona la programación y actualmente estoy aprendiendo tecnologías como:
+        Soy estudiante de FP Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) y apasionado por la programación.
+        Mi objetivo es crecer como desarrollador y crear proyectos que tengan un impacto real.
       </p>
-      <ul>
-        <li>Java</li>
-        <li>JavaScript y TypeScript</li>
-        <li>React</li>
-        <li>Spring Boot</li>
-        <li>HTML y CSS</li>
-        <li>SQL y MySQL</li>
-      </ul>
+      <h3>Habilidades</h3>
+      <div className="habilidades">
+        {habilidades.map((h, idx) => (
+          <span key={idx} className="habilidad">{h}</span>
+        ))}
+      </div>
       <p>
-        Mi objetivo es crecer como desarrollador, construir proyectos útiles y conseguir mi primer trabajo
-        profesional al terminar el FP. Además, me gusta aprender de forma autodidacta, hacer portfolio en GitHub
-        y experimentar con nuevas tecnologías.
-      </p>
-      <p>
-        Soy proactivo, con buena capacidad de resolución de problemas y siempre buscando mejorar mis habilidades.
-        Me encanta trabajar en proyectos que tengan impacto real y aprender nuevas herramientas cada día.
+        Me considero proactivo, con buena capacidad de resolución de problemas y siempre en busca de aprender nuevas tecnologías.
+        Me encanta trabajar en proyectos innovadores y mantener un portfolio actualizado en GitHub.
       </p>
     </section>
   );
