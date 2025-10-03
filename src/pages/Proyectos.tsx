@@ -5,7 +5,7 @@ const Proyectos: React.FC = () => {
     <section className="proyectos">
       <h1>Proyectos</h1>
       <ul>
-        <li>Portfolio Web - HTML/CSS</li>
+        <li>Portfolio Web - HTML/CSS/React</li>
         <li>Mini juego en JavaScript</li>
         <li>CRUD en Java + MySQL</li>
       </ul>

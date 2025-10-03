@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import SobreMi from './pages/SobreMi';
 import Proyectos from './pages/Proyectos';
 import Contacto from './pages/Contacto';
@@ -9,7 +9,8 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="app">
-        <header className="header">
+        {/* Cabecera / Navegación */}
+        <header>
           <nav>
             <ul>
               <li><Link to="/">Sobre mí</Link></li>
@@ -19,8 +20,10 @@ const App: React.FC = () => {
           </nav>
         </header>
 
+        {/* Contenido principal */}
         <main>
           <Routes>
+            {/* Página principal = Sobre mí */}
             <Route path="/" element={<SobreMi />} />
             <Route path="/proyectos" element={<Proyectos />} />
             <Route path="/contacto" element={<Contacto />} />
