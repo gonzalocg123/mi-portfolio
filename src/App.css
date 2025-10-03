@@ -1,10 +1,9 @@
-/* Reset y tipografía */
+/* ==== Reset y tipografía ==== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body, html, #root {
   font-family: 'Segoe UI', sans-serif;
   background-color: #000;
@@ -13,7 +12,7 @@ body, html, #root {
   width: 100%;
 }
 
-/* Header */
+/* ==== Header ==== */
 header {
   background-color: #111;
   padding: 1rem 2rem;
@@ -41,14 +40,20 @@ header ul li a:hover {
   transform: scale(1.1);
 }
 
-/* Main y secciones */
+/* ==== Main y secciones ==== */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-bottom: 2rem;
 }
-
 section {
   display: flex;
   flex-direction: column;
@@ -58,24 +63,16 @@ section {
   width: 90%;
   margin: 2rem auto;
   padding: 3rem 2rem;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  box-shadow: 0 0 25px rgba(255, 105, 180, 0.2);
-  animation: fadeInUp 0.8s forwards;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 16px;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 35px rgba(255, 105, 180, 0.2);
+  transition: all 0.3s ease;
 }
 section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 40px rgba(255, 105, 180, 0.4);
+  box-shadow: 0 0 45px rgba(255, 105, 180, 0.35);
 }
-
-/* Animación fadeInUp */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Foto */
 .foto {
   width: 150px;
   height: 150px;
@@ -90,32 +87,8 @@ section:hover {
   box-shadow: 0 0 25px #ff69b4;
 }
 
-/* SobreMi */
-.sobre-mi h2 {
-  font-size: 2.5rem;
-  color: #ff69b4;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px rgba(255,105,180,0.5);
-}
-.sobre-mi p, .sobre-mi ul li {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-.sobre-mi ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.sobre-mi ul li {
-  color: #ff69b4;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-.sobre-mi ul li:hover { color: #fff; }
-
-/* Proyectos */
-.proyectos h2 {
+/* ==== Proyectos ==== */
+.proyectos h2, .sobre-mi h2, .contacto h2 {
   font-size: 2.5rem;
   color: #ff69b4;
   margin-bottom: 1.5rem;
@@ -123,22 +96,22 @@ section:hover {
 }
 .proyectos ul {
   list-style: none;
-  padding: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+  width: 100%;
 }
 .proyecto-card {
-  background: #111;
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255,105,180,0.2);
+  border-radius: 16px;
+  background: rgba(17, 17, 17, 0.75);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 25px rgba(255, 105, 180, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1.5rem 2rem;
 }
 .proyecto-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(255,105,180,0.4);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 35px rgba(255,105,180,0.35);
 }
 .proyecto-card a {
   color: #ff69b4;
@@ -147,111 +120,59 @@ section:hover {
 }
 .proyecto-card a:hover { color: #fff; }
 
-/* ===== Contacto ===== */
-.contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 80vh;
-  padding: 3rem 1rem;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  border-radius: 16px;
-  box-shadow: 0 0 40px rgba(255, 105, 180, 0.2);
-  margin: 2rem auto;
-  max-width: 600px;
-  text-align: center;
-  animation: fadeInUp 1s forwards;
-}
-
-/* Título */
-.contacto h2 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #ff69b4;
-  margin-bottom: 2.5rem;
-  text-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
-  letter-spacing: 1px;
-}
-
-/* Formulario */
-.contacto form {
+/* ==== Contacto ==== */
+.contacto-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+  background: rgba(17,17,17,0.65);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 35px rgba(255,105,180,0.2);
 }
-
-/* Inputs y textarea */
 .contacto input,
 .contacto textarea {
   width: 100%;
   padding: 1rem 1.2rem;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 2px solid #ff69b4;
-  background-color: #111;
+  background: rgba(0,0,0,0.6);
   color: #fff;
   font-size: 1rem;
   transition: all 0.3s ease;
   outline: none;
 }
-
-.contacto input::placeholder,
-.contacto textarea::placeholder {
-  color: #aaa;
-  font-style: italic;
-}
-
-/* Focus glow */
 .contacto input:focus,
 .contacto textarea:focus {
   border-color: #ff85c1;
-  box-shadow: 0 0 15px #ff69b4;
+  box-shadow: 0 0 20px #ff69b4;
   transform: scale(1.02);
 }
-
-/* Botón */
 .contacto button {
-  padding: 1rem 1.8rem;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   background: linear-gradient(90deg, #ff69b4, #ff85c1);
-  color: #fff;
   font-weight: 700;
-  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px #ff69b4;
+  box-shadow: 0 0 12px #ff69b4;
 }
-
 .contacto button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px #ff69b4, 0 0 40px #ff85c1;
+  box-shadow: 0 0 25px #ff69b4, 0 0 45px #ff85c1;
   background: linear-gradient(90deg, #ff85c1, #ff69b4);
 }
-
-/* Mensaje de éxito */
-.contacto .success-message {
-  margin-top: 1rem;
+.success-message {
+  text-align: center;
   font-weight: 600;
   color: #ff85c1;
-  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  text-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
   animation: fadeInUp 0.5s forwards;
 }
 
-/* ===== Animación fadeInUp ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Footer moderno y siempre abajo */
+/* ==== Footer ==== */
 footer.footer {
   background: linear-gradient(135deg, #1a1a1a, #111);
   color: #ff69b4;
@@ -259,75 +180,44 @@ footer.footer {
   padding: 1.5rem 2rem;
   border-top: 1px solid rgba(255, 105, 180, 0.3);
   font-size: 0.9rem;
-  flex-shrink: 0; /* evita que se comprima */
+  flex-shrink: 0;
   box-shadow: 0 -3px 15px rgba(255, 105, 180, 0.2);
-  animation: fadeInUp 1s ease forwards;
 }
-
-/* Contenedor de links/redes sociales */
 footer.footer .socials {
   margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-
 footer.footer .socials a {
   text-decoration: none;
   color: #ff69b4;
   font-size: 1.2rem;
   transition: color 0.3s, transform 0.3s;
 }
-
 footer.footer .socials a:hover {
   color: #fff;
   transform: scale(1.2);
 }
 
-/* Ajuste para mantener el footer siempre abajo */
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* ocupa toda la altura de la ventana */
-}
-
-main {
-  flex: 1; /* ocupa todo el espacio disponible entre header y footer */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 2rem;
-}
-
-/* Animación suave de aparición (puedes reutilizar la que ya tienes) */
+/* ==== Animaciones ==== */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Responsive ===== */
+/* ==== Responsive ==== */
 @media (max-width: 600px) {
   .contacto {
     width: 90%;
     padding: 2rem 1rem;
   }
-
-  .contacto h2 {
+  .contacto h2, .proyectos h2, .sobre-mi h2 {
     font-size: 2rem;
   }
-
-  .contacto input,
-  .contacto textarea {
+  .contacto input, .contacto textarea {
     font-size: 0.95rem;
   }
-
   .contacto button {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;

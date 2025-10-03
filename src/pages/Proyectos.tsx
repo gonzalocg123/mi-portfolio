@@ -12,11 +12,13 @@ export default function Proyectos() {
       <ul>
         {proyectos.map((proyecto, idx) => (
           <li key={idx} className="proyecto-card">
-            <h3>{proyecto.nombre}</h3>
-            <p>{proyecto.descripcion}</p>
-            <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer">
-              Ver proyecto
-            </a>
+            <div className="card-content">
+              <h3>{proyecto.nombre}</h3>
+              <p>{proyecto.descripcion}</p>
+              <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer">
+                Ver proyecto
+              </a>
+            </div>
           </li>
         ))}
       </ul>
