@@ -30,15 +30,9 @@ export default function Contacto() {
   return (
     <section className="contacto">
       <h2>Contáctame</h2>
-      <form ref={form} onSubmit={sendEmail} className="contacto-form">
-        <label>
-          Correo electrónico:
-          <input type="email" name="user_email" placeholder="tuemail@ejemplo.com" required />
-        </label>
-        <label>
-          Mensaje:
-          <textarea name="message" rows={6} placeholder="Escribe tu mensaje aquí..." required />
-        </label>
+      <form ref={form} onSubmit={sendEmail}>
+        <input type="email" name="user_email" placeholder="Correo electrónico" required />
+        <textarea name="message" rows={5} placeholder="Escribe tu mensaje..." required />
         <button type="submit">Enviar</button>
         {success && <p className="success-message">✅ Correo enviado con éxito</p>}
       </form>

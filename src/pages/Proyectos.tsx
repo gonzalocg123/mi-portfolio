@@ -9,19 +9,17 @@ export default function Proyectos() {
   return (
     <section className="proyectos">
       <h2>Mis Proyectos</h2>
-      <ul>
+      <div className="proyectos-grid">
         {proyectos.map((proyecto, idx) => (
-          <li key={idx} className="proyecto-card">
-            <div className="card-content">
-              <h3>{proyecto.nombre}</h3>
-              <p>{proyecto.descripcion}</p>
-              <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer">
-                Ver proyecto
-              </a>
-            </div>
-          </li>
+          <div key={idx} className="proyecto-card">
+            <h3>{proyecto.nombre}</h3>
+            <p>{proyecto.descripcion}</p>
+            <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer">
+              Ver proyecto
+            </a>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
