@@ -1,26 +1,26 @@
-import { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contacto() {
   const form = useRef<HTMLFormElement>(null);
+  const [success, setSuccess] = useState(false);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!form.current) return;
 
     emailjs
       .sendForm(
-        "service_tjy0i4c",   // <-- tu Service ID en EmailJS
-        "template_1kmzac5",        // <-- tu Template ID en EmailJS
+        "service_tjy0i4c",   // Tu Service ID
+        "template_1kmzac5",  // Tu Template ID
         form.current,
-        "8bA3vX_P_754eblME"          // <-- tu Public Key en EmailJS
+        "8bA3vX_P_754eblME"  // Tu Public Key
       )
       .then(
-        (result) => {
-          console.log(result.text);
-          alert("✅ Correo enviado con éxito");
+        () => {
+          setSuccess(true);
           form.current?.reset();
+          setTimeout(() => setSuccess(false), 5000); // Oculta mensaje después de 5s
         },
         (error) => {
           console.error(error.text);
@@ -30,40 +30,29 @@ export default function Contacto() {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-4">
-      <h2 className="text-3xl font-bold mb-6 text-pink-400">Contáctame</h2>
-
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="flex flex-col gap-4 w-full max-w-md bg-gray-900 p-6 rounded-lg shadow-lg"
-      >
-        <label className="flex flex-col text-white">
+    <section className="contacto">
+      <h2>Contáctame</h2>
+      <form ref={form} onSubmit={sendEmail}>
+        <label>
           Correo electrónico:
           <input
             type="email"
             name="user_email"
+            placeholder="tuemail@ejemplo.com"
             required
-            className="mt-2 p-2 rounded bg-gray-800 text-white border border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
           />
         </label>
-
-        <label className="flex flex-col text-white">
+        <label>
           Mensaje:
           <textarea
             name="message"
-            required
             rows={5}
-            className="mt-2 p-2 rounded bg-gray-800 text-white border border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+            placeholder="Escribe tu mensaje aquí..."
+            required
           />
         </label>
-
-        <button
-          type="submit"
-          className="bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-600 transition-transform transform hover:scale-105"
-        >
-          Enviar
-        </button>
+        <button type="submit">Enviar</button>
+        {success && <p className="success-message">✅ Correo enviado con éxito</p>}
       </form>
     </section>
   );

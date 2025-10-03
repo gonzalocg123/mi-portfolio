@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# 🌟 Portfolio de Gonzalo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
+[![EmailJS](https://img.shields.io/badge/EmailJS-FF69B4?style=for-the-badge)](https://www.emailjs.com/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔹 Sobre el proyecto
 
-## React Compiler
+Este repositorio contiene mi **portfolio personal**, una landing page profesional creada con **React y TypeScript**, que sirve para:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Mostrar quién soy y mis habilidades.  
+- Enseñar mis proyectos destacados.  
+- Permitir que los visitantes me envíen un correo mediante un formulario funcional con **EmailJS**.  
 
-## Expanding the ESLint configuration
+El diseño es moderno, oscuro con acentos rosas, **responsive**, con animaciones suaves y efectos hover en botones e imágenes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 Proyectos destacados
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Proyecto | Descripción | Enlace |
+|----------|------------|--------|
+| Agenda de Contactos | Aplicación de escritorio con Java y SQLite | [Ver proyecto](https://github.com/gonzalocg123/AgendaContactos) |
+| Portfolio Web | Mi landing page en React y TypeScript | [Ver proyecto](https://gonzalocg123.github.io/mi-portfolio/) |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+---
+
+## 🛠 Tecnologías utilizadas
+
+- **Frontend:** React, TypeScript, HTML, CSS  
+- **Estilos y animaciones:** Flexbox, hover effects, sombras y animaciones fade-in  
+- **Formularios:** EmailJS  
+- **Herramientas:** Git, GitHub, Vite  
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/gonzalocg123/mi-portfolio.git
+```
+2. Instalar dependencias:
+```bash
+npm install
+```
+3. Ejecutar en desarrollo:
+```bash
+npm run dev
+```
+4. Abrir el navegador:
+```bash
+http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Deploy en GitHub Pages
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Construir para producción:
+```bash
+npm run build
 ```
+2. Publicar el directorio dist:
+```bash
+npm run deploy
+```
+3. Acceder a la página:
+```bash
+https://gonzalocg123.github.io/mi-portfolio/
+```
+
+---
+
+## 📫 Contacto
+
+- Correo: chicagodinogonzalo@gmail.com
+
+- Formulario de contacto en el portfolio.

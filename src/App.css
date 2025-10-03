@@ -13,18 +13,16 @@ body, html, #root {
   width: 100%;
 }
 
-/* Cabecera */
+/* Header */
 header {
   background-color: #111;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 100;
 }
-
 header ul {
   list-style: none;
   display: flex;
@@ -32,20 +30,18 @@ header ul {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 header ul li a {
-  text-decoration: none;
   color: #ff69b4;
   font-weight: bold;
+  text-decoration: none;
   transition: color 0.3s, transform 0.3s;
 }
-
 header ul li a:hover {
   color: #fff;
   transform: scale(1.1);
 }
 
-/* Contenedor principal */
+/* Main y secciones */
 main {
   display: flex;
   flex-direction: column;
@@ -53,30 +49,21 @@ main {
   width: 100%;
 }
 
-/* Secciones centradas y flexbox */
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1rem;
-  text-align: center;
   max-width: 900px;
   width: 90%;
   margin: 2rem auto;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-}
-section {
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  padding: 3rem 2rem;
   border-radius: 12px;
-  padding: 4rem 1rem;
-  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
   box-shadow: 0 0 25px rgba(255, 105, 180, 0.2);
+  animation: fadeInUp 0.8s forwards;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
 section:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 40px rgba(255, 105, 180, 0.4);
@@ -84,151 +71,204 @@ section:hover {
 
 /* Animación fadeInUp */
 @keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Foto */
+.foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff69b4;
+  margin-bottom: 1.5rem;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.foto:hover {
+  transform: scale(1.15) rotate(-3deg);
+  box-shadow: 0 0 25px #ff69b4;
+}
+
+/* SobreMi */
+.sobre-mi h2 {
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255,105,180,0.5);
+}
+.sobre-mi p, .sobre-mi ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.sobre-mi ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.sobre-mi ul li {
+  color: #ff69b4;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.sobre-mi ul li:hover { color: #fff; }
+
+/* Proyectos */
+.proyectos h2 {
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(255,105,180,0.5);
+}
+.proyectos ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.proyecto-card {
+  background: #111;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,105,180,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(255,105,180,0.4);
+}
+.proyecto-card a {
+  color: #ff69b4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.proyecto-card a:hover { color: #fff; }
+
+/* ===== Contacto ===== */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 80vh;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.2);
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  animation: fadeInUp 1s forwards;
+}
+
+/* Título */
+.contacto h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ff69b4;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+  letter-spacing: 1px;
+}
+
+/* Formulario */
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Inputs y textarea */
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 2px solid #ff69b4;
+  background-color: #111;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.contacto input::placeholder,
+.contacto textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Focus glow */
+.contacto input:focus,
+.contacto textarea:focus {
+  border-color: #ff85c1;
+  box-shadow: 0 0 15px #ff69b4;
+  transform: scale(1.02);
+}
+
+/* Botón */
+.contacto button {
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff69b4, #ff85c1);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+.contacto button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff69b4, 0 0 40px #ff85c1;
+  background: linear-gradient(90deg, #ff85c1, #ff69b4);
+}
+
+/* Mensaje de éxito */
+.contacto .success-message {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #ff85c1;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* ===== Animación fadeInUp ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Foto animada */
-.foto {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
-  border: 3px solid #ff69b4;
-  transition: transform 0.5s, box-shadow 0.5s;
-}
-
-.foto:hover {
-  transform: scale(1.15) rotate(-3deg);
-  box-shadow: 0 0 25px #ff69b4;
-}
-
-/* Proyectos */
-.proyectos ul {
-  list-style: none;
-  padding: 0;
-}
-
-.proyectos li {
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  color: #ff69b4;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.proyectos li:hover {
-  transform: translateX(5px);
-  color: #fff;
-}
-
-/* Contacto */
-.contacto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-
-.contacto h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #ff69b4;
-  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
-  animation: fadeInUp 1s forwards;
-}
-
-.contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 500px;
-  background-color: #111;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 105, 180, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contacto form:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 40px rgba(255, 105, 180, 0.4);
-}
-
-.contacto input,
-.contacto textarea {
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 2px solid #ff69b4;
-  background-color: #1a1a1a;
-  color: #fff;
-  font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contacto input:focus,
-.contacto textarea:focus {
-  outline: none;
-  border-color: #fff;
-  box-shadow: 0 0 15px #ff69b4;
-}
-
-.contacto button {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #ff69b4;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-}
-
-.contacto button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ff69b4;
-  background-color: #ff85c1;
-}
-
-/* Mensaje de éxito */
-.contacto .success-message {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #ff69b4;
-  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
-}
-
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
-  header ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  section {
+  .contacto {
+    width: 90%;
     padding: 2rem 1rem;
-  }
-
-  .foto {
-    width: 120px;
-    height: 120px;
-  }
-
-  .proyectos li {
-    font-size: 1rem;
   }
 
   .contacto h2 {
     font-size: 2rem;
   }
 
-  .contacto form {
-    padding: 1.5rem;
+  .contacto input,
+  .contacto textarea {
+    font-size: 0.95rem;
+  }
+
+  .contacto button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
   }
 }

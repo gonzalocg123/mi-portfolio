@@ -25,6 +25,7 @@ export default function SobreMi() {
       </p>
       <p>
         Soy proactivo, con buena capacidad de resolución de problemas y siempre buscando mejorar mis habilidades.
+        Me encanta trabajar en proyectos que tengan impacto real y aprender nuevas herramientas cada día.
       </p>
     </section>
   );
