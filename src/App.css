@@ -63,25 +63,24 @@ section {
   text-align: center;
   max-width: 900px;
   width: 90%;
-  margin: 0 auto;
+  margin: 2rem auto;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
-  animation-delay: 0.2s;
 }
 section {
   background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 4rem 1rem;
   margin-bottom: 2rem;
-  box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
-  transition: transform 0.3s;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 section:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.4);
 }
-
 
 /* Animación fadeInUp */
 @keyframes fadeInUp {
@@ -104,7 +103,7 @@ section:hover {
 
 .foto:hover {
   transform: scale(1.15) rotate(-3deg);
-  box-shadow: 0 0 20px #ff69b4;
+  box-shadow: 0 0 25px #ff69b4;
 }
 
 /* Proyectos */
@@ -126,44 +125,83 @@ section:hover {
 }
 
 /* Contacto */
-form {
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #ff69b4;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  animation: fadeInUp 1s forwards;
+}
+
+.contacto form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-input, textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.7rem;
+.contacto form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(255, 105, 180, 0.4);
+}
+
+.contacto input,
+.contacto textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
   border: 2px solid #ff69b4;
-  border-radius: 5px;
-  background-color: #111;
+  background-color: #1a1a1a;
   color: #fff;
+  font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input:focus, textarea:focus {
+.contacto input:focus,
+.contacto textarea:focus {
+  outline: none;
   border-color: #fff;
-  box-shadow: 0 0 10px #ff69b4;
-}
-
-button {
-  padding: 0.7rem 1.5rem;
-  background-color: #ff69b4;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-
-button:hover {
-  background-color: #ff85c1;
-  transform: scale(1.05);
   box-shadow: 0 0 15px #ff69b4;
+}
+
+.contacto button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff69b4;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.contacto button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff69b4;
+  background-color: #ff85c1;
+}
+
+/* Mensaje de éxito */
+.contacto .success-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ff69b4;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
 }
 
 /* Responsive */
@@ -184,5 +222,13 @@ button:hover {
 
   .proyectos li {
     font-size: 1rem;
+  }
+
+  .contacto h2 {
+    font-size: 2rem;
+  }
+
+  .contacto form {
+    padding: 1.5rem;
   }
 }
