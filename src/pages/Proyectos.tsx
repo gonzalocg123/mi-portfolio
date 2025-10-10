@@ -7,6 +7,7 @@ const proyectos = [
     nombre: "Agenda de Contactos", 
     descripcion: "Aplicación de escritorio desarrollada con Java y SQLite para gestionar contactos de forma eficiente.",
     enlace: "https://github.com/gonzalocg123/AgendaContactos",
+    enlace_vista: "#",
     categoria: "Escritorio",
     tecnologias: ["Java", "SQLite", "JavaFX"],
     imagen: "/proyecto1.jpg"
@@ -15,6 +16,7 @@ const proyectos = [
     nombre: "Portfolio Web", 
     descripcion: "Mi landing page personal desarrollada con React, TypeScript y CSS moderno con efectos visuales.",
     enlace: "https://github.com/gonzalocg123/mi-portfolio",
+    enlace_vista: "#",
     categoria: "Web",
     tecnologias: ["React", "TypeScript", "CSS3"],
     imagen: "/proyecto2.jpg"
@@ -23,6 +25,7 @@ const proyectos = [
     nombre: "Task Manager", 
     descripcion: "Task Manager, una herramienta de gestión de tareas moderna, desarrollada con React + Vite y Tailwind CSS. Este proyecto se comunica con una API REST desarrollada en Spring Boot y desplegada en Render, mientras que el frontend está desplegado en Vercel.",
     enlace: "https://github.com/gonzalocg123/taskmanager_frontend",
+    enlace_vista: "https://taskmanager-frontend-zeta.vercel.app/",
     categoria: "Full Stack",
     tecnologias: ["Spring Boot", "React", "MySQL"],
     imagen: "/proyecto3.jpg"
@@ -64,9 +67,9 @@ export default function Proyectos() {
                   <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer" className="btn-primary">
                     Ver Código
                   </a>
-                  <button className="btn-secondary">
+                  <a href={proyecto.enlace_vista} target="_blank" rel="noopener noreferrer" className="btn-secondary">
                     Ver Demo
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
