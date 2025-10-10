@@ -16,7 +16,7 @@ const experiencias = [
   {
     titulo: "Desarrollador Web (Prácticas FP DAM)",
     empresa: "Formación ACMA",
-    periodo: "Feb 2025 - Jun 2025",
+    periodo: "Feb 2025 - Marz 2025",
     descripcion: "Colaboración en proyectos de desarrollo web. Participación en el ciclo completo de desarrollo, desde el diseño hasta la implementación y pruebas."
   },
   {
