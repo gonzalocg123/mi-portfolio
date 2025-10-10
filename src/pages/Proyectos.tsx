@@ -10,6 +10,22 @@ const proyectos = [
     categoria: "Escritorio",
     tecnologias: ["Java", "SQLite", "JavaFX"],
     imagen: "/proyecto1.jpg"
+  },
+  { 
+    nombre: "Portfolio Web", 
+    descripcion: "Mi landing page personal desarrollada con React, TypeScript y CSS moderno con efectos visuales.",
+    enlace: "https://github.com/gonzalocg123/mi-portfolio",
+    categoria: "Web",
+    tecnologias: ["React", "TypeScript", "CSS3"],
+    imagen: "/proyecto2.jpg"
+  },
+  { 
+    nombre: "Task Manager", 
+    descripcion: "Task Manager, una herramienta de gestión de tareas moderna, desarrollada con React + Vite y Tailwind CSS. Este proyecto se comunica con una API REST desarrollada en Spring Boot y desplegada en Render, mientras que el frontend está desplegado en Vercel.",
+    enlace: "https://github.com/gonzalocg123/taskmanager_frontend",
+    categoria: "Full Stack",
+    tecnologias: ["Spring Boot", "React", "MySQL"],
+    imagen: "/proyecto3.jpg"
   }
 ];
 

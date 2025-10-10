@@ -2,27 +2,27 @@ import React from 'react';
 import miFoto from "../assets/mi-foto.png";
 
 const habilidades = [
-  { nombre: "Java", nivel: 90 },
-  { nombre: "JavaScript / TypeScript", nivel: 85 },
-  { nombre: "React", nivel: 80 },
-  { nombre: "Spring Boot", nivel: 75 },
-  { nombre: "HTML / CSS", nivel: 95 },
-  { nombre: "SQL / MySQL", nivel: 85 },
-  { nombre: "Git / GitHub", nivel: 80 },
-  { nombre: "Python", nivel: 70 }
+  { nombre: "Java", nivel: 50 },
+  { nombre: "JavaScript / TypeScript", nivel: 50 },
+  { nombre: "React", nivel: 50 },
+  { nombre: "Spring Boot", nivel: 50 },
+  { nombre: "HTML / CSS", nivel: 50 },
+  { nombre: "SQL / MySQL", nivel: 50 },
+  { nombre: "Git / GitHub", nivel: 50 },
+  { nombre: "Python", nivel: 50 }
 ];
 
 const experiencias = [
   {
-    titulo: "Desarrollador Full Stack (Prácticas)",
-    empresa: "Empresa XYZ",
-    periodo: "Ene 2024 - Jun 2024",
-    descripcion: "Desarrollo de aplicaciones web con React y Spring Boot, mantenimiento de bases de datos MySQL y colaboración en equipo usando metodologías ágiles."
+    titulo: "Desarrollador Web (Prácticas FP DAM)",
+    empresa: "Formación ACMA",
+    periodo: "Feb 2025 - Jun 2025",
+    descripcion: "Colaboración en proyectos de desarrollo web. Participación en el ciclo completo de desarrollo, desde el diseño hasta la implementación y pruebas."
   },
   {
     titulo: "Proyectos Personales",
     empresa: "Freelance",
-    periodo: "2023 - Actualidad",
+    periodo: "Actualidad",
     descripcion: "Desarrollo de diversas aplicaciones y sitios web para clientes, incluyendo portfolios, sistemas de gestión y aplicaciones de escritorio."
   }
 ];
@@ -74,7 +74,6 @@ export default function SobreMi() {
               <div key={idx} className="habilidad-item">
                 <div className="habilidad-header">
                   <span className="habilidad-nombre">{habilidad.nombre}</span>
-                  <span className="habilidad-porcentaje">{habilidad.nivel}%</span>
                 </div>
                 <div className="habilidad-bar">
                   <div 

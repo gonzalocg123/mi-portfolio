@@ -66,7 +66,7 @@ export default function Contacto() {
             <div className="contacto-icon">💼</div>
             <div>
               <h4>LinkedIn</h4>
-              <p>linkedin.com/in/gonzalo-chica-godino</p>
+              <p>https://www.linkedin.com/in/gonzalo-chica-godino-27710a33a/</p>
             </div>
           </div>
           <div className="contacto-item">
@@ -134,7 +134,7 @@ export default function Contacto() {
               <div className="success-icon">✅</div>
               <div>
                 <h4>¡Mensaje enviado con éxito!</h4>
-                <p>Te responderé en la mayor brevedad posible.</p>
+                <p>Te responderé lo antes posible.</p>
               </div>
             </div>
           )}
