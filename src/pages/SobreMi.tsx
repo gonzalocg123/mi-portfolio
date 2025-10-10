@@ -1,15 +1,14 @@
-import React from 'react';
 import miFoto from "../assets/mi-foto.png";
 
 const habilidades = [
-  { nombre: "Java", nivel: 50 },
-  { nombre: "JavaScript / TypeScript", nivel: 50 },
-  { nombre: "React", nivel: 50 },
-  { nombre: "Spring Boot", nivel: 50 },
-  { nombre: "HTML / CSS", nivel: 50 },
-  { nombre: "SQL / MySQL", nivel: 50 },
-  { nombre: "Git / GitHub", nivel: 50 },
-  { nombre: "Python", nivel: 50 }
+  "Java",
+  "JavaScript / TypeScript", 
+  "React",
+  "Spring Boot",
+  "HTML / CSS",
+  "SQL / MySQL",
+  "Git / GitHub",
+  "Python"
 ];
 
 const experiencias = [
@@ -69,18 +68,10 @@ export default function SobreMi() {
         
         <div className="habilidades-section">
           <h3>Mis Habilidades</h3>
-          <div className="habilidades">
+          <div className="habilidades-grid">
             {habilidades.map((habilidad, idx) => (
-              <div key={idx} className="habilidad-item">
-                <div className="habilidad-header">
-                  <span className="habilidad-nombre">{habilidad.nombre}</span>
-                </div>
-                <div className="habilidad-bar">
-                  <div 
-                    className="habilidad-progreso" 
-                    style={{ width: `${habilidad.nivel}%` }}
-                  ></div>
-                </div>
+              <div key={idx} className="habilidad-tag">
+                {habilidad}
               </div>
             ))}
           </div>

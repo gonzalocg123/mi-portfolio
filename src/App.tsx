@@ -4,7 +4,7 @@ import SobreMi from './pages/SobreMi';
 import Proyectos from './pages/Proyectos';
 import Contacto from './pages/Contacto';
 import Footer from './components/Footer';
-import ParticleBackground from './components/ParticleBackground';
+import ParticleBackground from './components/SimpleBackground';
 import './App.css';
 
 const Navigation: React.FC = () => {
