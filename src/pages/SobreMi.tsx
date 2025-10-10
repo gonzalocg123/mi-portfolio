@@ -2,7 +2,8 @@ import miFoto from "../assets/mi-foto.png";
 
 const habilidades = [
   "Java",
-  "JavaScript / TypeScript", 
+  "JavaScript",
+  "TypeScript", 
   "React",
   "Spring Boot",
   "HTML / CSS",

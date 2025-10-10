@@ -4,22 +4,31 @@ import SobreMi from './pages/SobreMi';
 import Proyectos from './pages/Proyectos';
 import Contacto from './pages/Contacto';
 import Footer from './components/Footer';
-import ParticleBackground from './components/SimpleBackground';
+import ElegantBackground from './components/ElegantBackground';
 import './App.css';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header>
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <nav>
         <div className="nav-brand">
-          <span>Gonzalo</span>
+          <span className="gradient-text">Gonzalo</span>
         </div>
         <ul>
           <li>
@@ -59,7 +68,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="app">
-        <ParticleBackground />
+        <ElegantBackground />
         <Navigation />
         
         <main>
