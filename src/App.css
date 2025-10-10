@@ -101,9 +101,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .header ul li a.active {
   color: var(--primary-light);
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.15);
 }
 
+/*
 .header ul li a.active::after {
   content: '';
   position: absolute;
@@ -115,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--primary-color);
   border-radius: 50%;
 }
+*/
 
 /* ==== Layout principal ==== */
 .app {
@@ -140,7 +142,7 @@ section {
   padding: 3rem 2.5rem;
   border-radius: var(--border-radius);
   background: var(--bg-card);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
@@ -189,9 +191,6 @@ section:hover {
   object-fit: cover;
   border: 3px solid transparent;
   background: linear-gradient(45deg, var(--primary-color), var(--accent-color)) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
   transition: var(--transition);
 }
 
