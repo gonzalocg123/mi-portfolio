@@ -7,7 +7,7 @@ const proyectos = [
     nombre: "Agenda de Contactos", 
     descripcion: "Aplicación de escritorio desarrollada con Java y SQLite para gestionar contactos de forma eficiente.",
     enlace: "https://github.com/gonzalocg123/AgendaContactos",
-    enlace_vista: "#",
+    enlace_vista: "",
     categoria: "Escritorio",
     tecnologias: ["Java", "SQLite", "JavaFX"],
     imagen: "/proyecto1.jpg"
@@ -16,7 +16,7 @@ const proyectos = [
     nombre: "Portfolio Web", 
     descripcion: "Mi landing page personal desarrollada con React, TypeScript y CSS moderno con efectos visuales.",
     enlace: "https://github.com/gonzalocg123/mi-portfolio",
-    enlace_vista: "#",
+    enlace_vista: "",
     categoria: "Web",
     tecnologias: ["React", "TypeScript", "CSS3"],
     imagen: "/proyecto2.jpg"
