@@ -1,4 +1,4 @@
-/* ==== Reset y tipografía moderna ==== */
+/* General */
 * {
   margin: 0;
   padding: 0;
@@ -33,13 +33,13 @@ body, html, #root {
   line-height: 1.6;
 }
 
-/* ==== Tipografía mejorada ==== */
+/* Tipografía mejorada */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
 }
 
-/* ==== Header elegante ==== */
+/* Header */
 .header {
   background: rgba(15, 15, 15, 0.8);
   backdrop-filter: blur(20px);
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 */
 
-/* ==== Layout principal ==== */
+/* Layout principal  */
 .app {
   display: flex;
   flex-direction: column;
@@ -155,7 +155,7 @@ section:hover {
   transform: translateY(-2px);
 }
 
-/* ==== Animaciones mejoradas ==== */
+/* Animaciones mejoradas */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -172,7 +172,7 @@ section:hover {
   to { opacity: 1; }
 }
 
-/* ==== Sección SobreMi - Rediseñada ==== */
+/*  Sección SobreMi  */
 .sobre-mi-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -278,7 +278,7 @@ section:hover {
   font-size: 0.9rem;
 }
 
-/* Habilidades como tags elegantes */
+/* Habilidades */
 .habilidades-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -321,7 +321,7 @@ section:hover {
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
 }
 
-/* ==== Sección Proyectos - Rediseñada ==== */
+/* Sección Proyectos */
 .proyectos-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -492,7 +492,7 @@ section:hover {
   border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
-/* ==== Sección Contacto - Rediseñada ==== */
+/* Sección Contacto */
 .contacto-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -686,7 +686,7 @@ section:hover {
   font-size: 0.9rem;
 }
 
-/* ==== Footer elegante ==== */
+/* Footer */
 footer.footer {
   background: var(--bg-darker);
   color: var(--text-muted);
@@ -730,7 +730,7 @@ footer.footer .socials a:hover {
   box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
 }
 
-/* ==== Responsive ==== */
+/* Responsive */
 @media (max-width: 768px) {
   .header {
     padding: 1rem;

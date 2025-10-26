@@ -40,7 +40,7 @@ export default function Contacto() {
       (error) => {
         console.error(error.text);
         setLoading(false);
-        alert("❌ Hubo un error al enviar el correo. Por favor, inténtalo de nuevo.");
+        alert("Hubo un error al enviar el correo. Por favor, inténtalo de nuevo.");
       }
     );
   };

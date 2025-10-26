@@ -4,7 +4,6 @@ import SobreMi from './pages/SobreMi';
 import Proyectos from './pages/Proyectos';
 import Contacto from './pages/Contacto';
 import Footer from './components/Footer';
-import ElegantBackground from './components/ElegantBackground';
 import './App.css';
 
 const Navigation: React.FC = () => {
@@ -28,7 +27,7 @@ const Navigation: React.FC = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <nav>
         <div className="nav-brand">
-          <span className="gradient-text">Gonzalo</span>
+          <span className="gradient-text">Gonzalo Chica Godino</span>
         </div>
         <ul>
           <li>
@@ -68,7 +67,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="app">
-        <ElegantBackground />
         <Navigation />
         
         <main>
