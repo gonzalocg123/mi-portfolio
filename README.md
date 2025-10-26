@@ -1,4 +1,4 @@
-# 🌟 Portfolio de Gonzalo
+# Portfolio de Gonzalo
 
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -20,7 +20,7 @@ El diseño es moderno, oscuro con acentos rosas, **responsive**, con animaciones
 
 ---
 
-## 💻 Proyectos destacados
+## Proyectos destacados
 
 | Proyecto | Descripción | Enlace |
 |----------|------------|--------|
@@ -30,7 +30,7 @@ El diseño es moderno, oscuro con acentos rosas, **responsive**, con animaciones
 
 ---
 
-## 🛠 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **Frontend:** React, TypeScript, HTML, CSS  
 - **Estilos y animaciones:** Flexbox, hover effects, sombras y animaciones fade-in  
@@ -39,7 +39,7 @@ El diseño es moderno, oscuro con acentos rosas, **responsive**, con animaciones
 
 ---
 
-## 🚀 Cómo ejecutar el proyecto
+## Cómo ejecutar el proyecto
 
 1. Clonar el repositorio:
 ```bash
@@ -60,7 +60,7 @@ http://localhost:5173
 
 ---
 
-## 📦 Deploy en GitHub Pages
+## Deploy en GitHub Pages
 
 1. Construir para producción:
 ```bash
@@ -77,7 +77,7 @@ https://gonzalocg123.github.io/mi-portfolio/
 
 ---
 
-## 📫 Contacto
+## Contacto
 
 - Correo: chicagodinogonzalo@gmail.com
 
