@@ -26,7 +26,7 @@ El diseño es moderno, oscuro con acentos rosas, **responsive**, con animaciones
 |----------|------------|--------|
 | Agenda de Contactos | Aplicación de escritorio con Java y SQLite | [Ver proyecto](https://github.com/gonzalocg123/AgendaContactos) |
 | Portfolio Web | Mi landing page en React y TypeScript | [Ver proyecto](https://gonzalocg123.github.io/mi-portfolio/) |
-
+| Task Manager | Aplicación de gestión de tareas React + Vite en el frontend y Spring Boot + MySQL en el backend.| [Ver proyecto](https://taskmanager-frontend-zeta.vercel.app/) |
 
 ---
 
